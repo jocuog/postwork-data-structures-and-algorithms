@@ -1,5 +1,15 @@
 def find_first_duplicate(arr)
   # type your code in here
+
+  valueSet = Set.new # create a new value Hash Set
+
+  arr.each do |value| #iterate through values
+    return if valueSet.include?(value) # check value set includes value, if it does return vlaue
+
+    valueSet.add(value) # add the value to the value set
+  end
+
+  -1
 end
 
 if __FILE__ == $PROGRAM_NAME
