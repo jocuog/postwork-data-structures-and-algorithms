@@ -1,7 +1,7 @@
 function findFirstDuplicate(arr) {
   // type your code here
 
-  let elementsSet = new Set(); // This new Set object allows the storgae of each element from the given arrat as a unique value and check if it alreadt contains a value using Set.add() and Set.has(elementsSet).
+  let elementsSet = new Set(); // This new Set object allows the storage of each element from the given array as a unique value and check if it alreadty contains a value using Set.add() and Set.has(elementsSet).
 
   for ( let i = 0; i < arr.length; i++) { // looping through the given array
     if (elementsSet.has(arr[i])) return arr[i]; // check to see if the Set already contains the element that we are on currentlt on in the loop. if it exists return that value
