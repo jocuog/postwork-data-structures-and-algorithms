@@ -1,8 +1,8 @@
-def recursive_count(num = 0)
+def recursive_count(num = 0)  # default arg is set to 0
   # type your code in here
-  return if num >= 10
+  return if num >= 10   # base case tells how long to run recursion method
   puts num
-  recursive_count(num + 1)
+  recursive_count(num + 1)  # code that runs for each stack fram
 end
 
 
