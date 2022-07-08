@@ -1,17 +1,17 @@
 function findShortestString(arr) {
   // THE LONGER WAY OF DOING THE EXACT SAME THING THAT'S ON LINES 13-14
-  // let shortest = arr[0];
+  let shortest = arr[0];
 
-  // arr.forEach(string => {
-  //   if (string.length < shortest.length) {
-  //     shortest = string;
-  //   }
-  // });
+  arr.forEach(string => {
+    if (string.length < shortest.length) {
+      shortest = string;
+    }
+  });
 
-  // return shortest;
+  return shortest;
 
-  return arr.reduce((shortest, string) => 
-    string.length < shortest.length ? string : shortest);
+  // return arr.reduce((shortest, string) => 
+  //   string.length < shortest.length ? string : shortest);
 }
 
 if (require.main === module) {
