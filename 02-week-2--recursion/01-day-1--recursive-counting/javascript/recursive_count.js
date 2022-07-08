@@ -4,7 +4,9 @@ function recursiveCount(num = 0) {
     return
     }
     console.log(num)
-    recursiveCount(num + 1)   // call recursive method at the end of the function
+    // recursiveCount(num + 1) 
+      // call recursive method at the end of the function
+    recursiveCount(++num)
 }
 
 if (require.main === module) {
