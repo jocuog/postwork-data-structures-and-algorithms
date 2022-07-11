@@ -1,5 +1,9 @@
 def fibonacci(n)
   # type your code in here
+  return n if n < 2
+
+  return fibonacci(n - 1) + fibonacci(n - 2)
+
 end
 
 if __FILE__ == $PROGRAM_NAME
@@ -16,6 +20,15 @@ if __FILE__ == $PROGRAM_NAME
   puts "Expecting: 55"
   puts "=>", fibonacci(10)
 
+  puts 
+
+  puts "Expecting: 1"
+  puts "=>", fibonacci(1)
+
+  puts 
+
+  puts "Expecting: 6765"
+  puts "=>", fibonacci(20)
   # Don't forget to add your own!
 end
 
