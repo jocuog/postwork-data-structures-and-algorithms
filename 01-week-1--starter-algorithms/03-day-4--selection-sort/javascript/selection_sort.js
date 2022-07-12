@@ -55,7 +55,7 @@ if (require.main === module) {
     selectionSort([2,1]);
     selectionSort(longInput); 
 }
-
+}
   const avgTime = (Date.now() - startTime) / 2000;
 
   console.log(avgTime);
