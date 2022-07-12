@@ -1,8 +1,4 @@
-def find_shortest_string(arr)
-  arr.reduce do |shortest, string|
-    string.length < shortest.length ? string : shortest
-  end
-end
+
 
 def find_shortest_string_recursive(arr)
   return arr.first if arr.length == 1
