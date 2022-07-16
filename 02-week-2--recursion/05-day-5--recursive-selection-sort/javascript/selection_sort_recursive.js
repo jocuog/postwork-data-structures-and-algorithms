@@ -6,7 +6,7 @@ function selectionSortRecursive(arr) {
 
   const min = Math.min(...arr)  // Math.min gives the lowest valued element in the array
   const idx = arr.indexOf(min); // get the index of the element
-  arr.splice(idx, 1); // replace one element at the index idx
+  arr.splice(idx, 1); // remove one element at the index idx
 
   const result = selectionSortRecursive(arr);
   result.unshift(min); // add the element taken from the recursive call to the beginning of the array
