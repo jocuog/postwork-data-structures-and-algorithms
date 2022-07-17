@@ -26,6 +26,59 @@ function balancingParentheses(string) {
       return result
 } 
 
+function balancingParenthesesSol(string) {
+  let missing = 0;
+  let openings = 0;
+
+  for (let i = 0; i < string.length; ++i) {
+    if (string[i] === '(') {
+      ++openings;
+      continue;
+    }
+
+    if (openings > 0) {
+      --openings;
+    } else {
+      ++missing;
+    }
+  }
+
+  return missing + openings;
+}
+
+const balancingParenthesesRecursive = (string) => {
+
+  const stringArr = string.split('')
+  let result = 0
+  let paranthesesO = 0
+  let paranthesesC = 0
+
+  if (stringArr.length === 0 ) {
+    return 0
+  }
+  console.log(stringArr)
+  if (stringArr[0] === '(') {
+    paranthesesO += 1
+  }
+  if (stringArr[0] === ')') {
+    paranthesesC += 1
+  }
+
+  balancingParenthesesRecursive(stringArr[0]+1)
+
+  if (paranthesesC === paranthesesO) {
+    return 0
+  }
+  if (paranthesesC  > paranthesesO) {
+    result = paranthesesC - paranthesesO
+  }
+  if (paranthesesC < paranthesesO) {
+    result = paranthesesO - paranthesesC
+  }
+  return result
+}
+
+balancingParenthesesRecursive('(()())))(())((')
 
 if (require.main === module) {
   // add your own tests in here
@@ -70,6 +123,7 @@ function benchmark(callback) {
 }
 
 console.log("iterative", benchmark(() => balancingParentheses(')())(())((()(()(')))
+console.log("iterative For Loop", benchmark(() => balancingParenthesesSol(')())(())((()(()(')))
 
 module.exports = balancingParentheses;
 
