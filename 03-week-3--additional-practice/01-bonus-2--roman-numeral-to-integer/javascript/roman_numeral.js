@@ -36,8 +36,9 @@ function romanNumeral(string) {
         total += romanNumeralTable[string[idx]]; // else add the value from the hash table to the total
         ++idx; // increment the index by one
       }
-      return total;
+      
     }
+    return total;
 }
 
 if (require.main === module) {
@@ -54,7 +55,23 @@ if (require.main === module) {
 
   console.log("Expecting: 402");
   console.log(romanNumeral('CDII'));
-}
+
+  console.log("");
+
+  console.log("Expecting: 2100");
+  console.log(romanNumeral('MMC'));
+
+  console.log("");
+
+  console.log("Expecting: 3");
+  console.log(romanNumeral('III'));
+
+
+  console.log("");
+
+  console.log("Expecting: 502");
+  console.log(romanNumeral('DII'));
+
 
 module.exports = romanNumeral;
 
