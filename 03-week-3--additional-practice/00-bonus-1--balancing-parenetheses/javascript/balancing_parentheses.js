@@ -46,37 +46,37 @@ function balancingParenthesesSol(string) {
   return missing + openings;
 }
 
-const balancingParenthesesRecursive = (string) => {
+// const balancingParenthesesRecursive = (string) => {
 
-  const stringArr = string.split('')
-  let result = 0
-  let paranthesesO = 0
-  let paranthesesC = 0
+//   const stringArr = string.split('')
+//   let result = 0
+//   let paranthesesO = 0
+//   let paranthesesC = 0
 
-  if (stringArr.length === 0 ) {
-    return 0
-  }
-  console.log(stringArr)
-  if (stringArr[0] === '(') {
-    paranthesesO += 1
-  }
-  if (stringArr[0] === ')') {
-    paranthesesC += 1
-  }
+//   if (stringArr.length === 0 ) {
+//     return 
+//   }
+//   console.log(stringArr)
+//   if (stringArr[0] === '(') {
+//     paranthesesO += 1
+//   }
+//   if (stringArr[0] === ')') {
+//     paranthesesC += 1
+//   }
 
-  balancingParenthesesRecursive(stringArr[0]+1)
+//   balancingParenthesesRecursive(stringArr[0])
 
-  if (paranthesesC === paranthesesO) {
-    return 0
-  }
-  if (paranthesesC  > paranthesesO) {
-    result = paranthesesC - paranthesesO
-  }
-  if (paranthesesC < paranthesesO) {
-    result = paranthesesO - paranthesesC
-  }
-  return result
-}
+//   if (paranthesesC === paranthesesO) {
+//     return 0
+//   }
+//   if (paranthesesC  > paranthesesO) {
+//     result = paranthesesC - paranthesesO
+//   }
+//   if (paranthesesC < paranthesesO) {
+//     result = paranthesesO - paranthesesC
+//   }
+//   return result
+// }
 
 balancingParenthesesRecursive('(()())))(())((')
 
