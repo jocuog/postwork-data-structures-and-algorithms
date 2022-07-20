@@ -71,7 +71,7 @@ if (require.main === module) {
 
   console.log("Expecting: 502");
   console.log(romanNumeral('DII'));
-
+}
 
 module.exports = romanNumeral;
 
