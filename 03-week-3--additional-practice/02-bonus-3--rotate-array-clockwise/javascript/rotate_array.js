@@ -4,8 +4,10 @@ function rotateArray(arr, k) {
   // rotate the array clockwise by taking the first element of the array and adding it to the end of the array
 
   for (let i = 0; i < k; i++) {
-    console.log(arr[i]);
+    let el = arr.pop()
+    arr.unshift(el)
   }
+  return arr
 }
 
 if (require.main === module) {
