@@ -17,17 +17,17 @@ const maxValue = (nums) => {
 if (require.main === module) {
 
   console.log("Expecting: 44");
-  console.log(romanNumeral([24,26,35,44]));
+  console.log(maxValue([24,26,35,44]));
 
   console.log("");
 
   console.log("Expecting: 223");
-  console.log(romanNumeral([201,154,223,36]));
+  console.log(maxValue([201,154,223,36]));
 
   console.log("");
 
   console.log("Expecting: 3848");
-  console.log(romanNumeral([500.3848,0,-659]))
+  console.log(maxValue([500, 3848, 0, -659]))
     
 }
 
