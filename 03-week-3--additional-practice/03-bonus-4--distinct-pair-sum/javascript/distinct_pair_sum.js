@@ -1,5 +1,13 @@
 function distinctPairSum(arr, k) {
   // type your code here
+  // given an input array and a target value  return all distinct pairs of consecutive numbers that add to the target. The order of the pairs in each pair does not matter. 
+  // iterate through the array adding each pair and checking it against the target value
+  // put any pair that meets the target that isnt already there into an array
+  
+  let targetPairs = [];
+
+  
+
 }
 
 if (require.main === module) {
