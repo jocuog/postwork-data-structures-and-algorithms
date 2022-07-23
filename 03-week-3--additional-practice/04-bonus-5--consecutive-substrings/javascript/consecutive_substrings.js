@@ -1,13 +1,19 @@
 function consecutiveSubstrings(string) {
   // type your code here
-  let result = [];
+  let result = []
+  for (i = 0; i < string.length; i++) {   // first loop for starting index
+    // let fragment = string.charAt(i);
+    // console.log("frag", fragment);
+    // console.log("index", i);
+    let substring = ''
 
-  for (let i = 0; i < string.length; i++) {
-    let fragment = string.charAt(i);
-    console.log("frag", fragment);
-    console.log("index", i);
-    
+      for (let j = i; j < string.length; j++) {   // second loop for generating substring
+        substring += string.charAt(j);
+        result.push(substring);
+      }
+      
   }
+  return result;
 }
 
 if (require.main === module) {
