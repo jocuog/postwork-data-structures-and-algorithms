@@ -6,6 +6,8 @@ function consecutiveSubstrings(string) {
     subs.push(char);
 
     let fragment = char;
+    console.log("frag",fragment)
+    console.log("index",idx)
 
     stringArr.slice(idx + 1).forEach((letter) => {
       fragment = fragment + letter;
