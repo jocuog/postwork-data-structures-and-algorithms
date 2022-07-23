@@ -24,8 +24,6 @@ function consecutiveSubstringsAlt(string) {
     subs.push(char);
 
     let fragment = char;
-    console.log("frag",fragment)
-    console.log("index",idx)
 
     stringArr.slice(idx + 1).forEach((letter) => {
       fragment = fragment + letter;
@@ -75,8 +73,8 @@ function benchmark(callback) {
   return (Date.now() - startTime) / 1000;
 }
 
-console.log('Iterative:', benchmark(() => findShortestString(['cat', 'dogs', '', 'bats', 'flags'])));
-console.log('Recursive:', benchmark(() => findShortestStringRecursive(['cat', 'dogs', '', 'bats', 'flags'])));
+console.log('for loop:', benchmark(() => consecutiveSubstrings('johnogletree')));
+console.log('forEach:', benchmark(() => consecutiveSubstringsAlt('johnogletree')));
 
 module.exports = consecutiveSubstrings;
 
