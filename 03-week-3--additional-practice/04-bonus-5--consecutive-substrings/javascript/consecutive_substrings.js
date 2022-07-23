@@ -16,6 +16,26 @@ function consecutiveSubstrings(string) {
   return result;
 }
 
+function consecutiveSubstringsAlt(string) {
+  const stringArr = string.split('');
+  const subs = [];
+
+  stringArr.forEach((char, idx) => {
+    subs.push(char);
+
+    let fragment = char;
+    console.log("frag",fragment)
+    console.log("index",idx)
+
+    stringArr.slice(idx + 1).forEach((letter) => {
+      fragment = fragment + letter;
+      subs.push(fragment);
+    });
+  });
+
+  return subs;
+}
+
 if (require.main === module) {
   // add your own tests in here
   console.log("Expecting: ['a', 'ab', 'abc', 'b', 'bc', 'c']");
@@ -44,6 +64,19 @@ if (require.main === module) {
   console.log("");
 
 }
+
+function benchmark(callback) {
+  const startTime = Date.now();
+
+  for (let i = 0; i < 1000; ++i) {
+    callback();
+  }
+
+  return (Date.now() - startTime) / 1000;
+}
+
+console.log('Iterative:', benchmark(() => findShortestString(['cat', 'dogs', '', 'bats', 'flags'])));
+console.log('Recursive:', benchmark(() => findShortestStringRecursive(['cat', 'dogs', '', 'bats', 'flags'])));
 
 module.exports = consecutiveSubstrings;
 
